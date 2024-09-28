@@ -14,4 +14,4 @@ provider:
 
 functions:
   customer-authentication:
-    handler: src/handler
+    handler: src/handler.main
