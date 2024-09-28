@@ -12,6 +12,9 @@ provider:
         - "lambda:*"
       Resource: "*"
 
+plugins:
+  - serverless-plugin-typescript
+
 functions:
   customer-authentication:
-    handler: handler.main
+    handler: src/handler.main
