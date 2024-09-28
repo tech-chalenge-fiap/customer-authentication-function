@@ -10,10 +10,8 @@ interface IAuthenticationResult {
   body: string
 }
 
-export const handler = async (event: IEvent): Promise<IAuthenticationResult> => {
+export const main = async (event: IEvent): Promise<IAuthenticationResult> => {
   try {
-    let eventBody
-
     if (!event) {
       return {
         statusCode: 400,
@@ -30,7 +28,6 @@ export const handler = async (event: IEvent): Promise<IAuthenticationResult> => 
       }
     }
 
-    // TODO: conectar com a base ou via api de consulta de cpf
     if (validCpfs.includes(cpf)) {
       return {
         statusCode: 200,
