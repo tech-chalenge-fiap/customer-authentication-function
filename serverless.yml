@@ -1,6 +1,6 @@
 service: customer-authentication-function
 
-frameworkVersion: "3"
+frameworkVersion: "3.38"
 
 provider:
   name: aws
