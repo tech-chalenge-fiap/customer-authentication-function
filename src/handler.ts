@@ -12,6 +12,7 @@ interface IAuthenticationResult {
 
 export const main = async (event: IEvent): Promise<IAuthenticationResult> => {
   try {
+    console.log('evento ->>', event)
     if (!event) {
       return {
         statusCode: 400,
